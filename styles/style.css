@@ -87,6 +87,7 @@ ol {
   text-align: center;
   color: #ffffff;
   width: 100%;
+  cursor: pointer;
 }
 
 .content__list {
@@ -116,10 +117,6 @@ ol {
 
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
-}
-
-.content__list::-webkit-scrollbar {
-  display: none;
 }
 
 .content__video-card {
@@ -170,6 +167,10 @@ ol {
   text-transform: uppercase;
   color: #ffffff;
   padding: 2px 0px 6px 2px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description {
@@ -235,9 +236,8 @@ ol {
   outline: none;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline 1px #ffffff;
-  text-underline-offset: 5px;
 }
 
 .search-form__label:has(:focus-visible) {
